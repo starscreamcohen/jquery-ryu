@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	
  $('.ryu').mouseenter(function(){
  	$('.ryu-still').hide();
  	$('.ryu-ready').show();
@@ -19,11 +18,29 @@ $(document).ready(function() {
  		$(this).css('left', '526px');
  		}
  	);	
-
  })
  .mouseup(function() {
  	// ryu goes back to his ready position
  	$('.ryu-throwing').hide();
+ 	$('.ryu-ready').show();
+ });
+ 
+ function showCool () {$('.ryu-cool').show();}		
+ $(this).bind('keydown', function(event){
+ 	if(event.keyCode==88) {
+ 		$('.ryu-still').hide();
+ 		$('.ryu-ready').hide();
+ 		showCool ()
+ 	}
+ })
+ .bind('keyup', function(event) {
+ 	$('.ryu-cool').hide();
+ 	$('.ryu-still').show();
+
+ })
+ .bind('keyup', function(event) {
+ 	$('.ryu-cool').hide();
+ 	$('ryu-still').hide();
  	$('.ryu-ready').show();
  });
  function playHadouken () {
