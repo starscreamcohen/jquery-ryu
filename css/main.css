@@ -53,3 +53,7 @@ body {
 	top: -326px;
 	left: 526px;
 }
+
+#text {
+	float: right;
+}
