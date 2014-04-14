@@ -12,6 +12,7 @@ body {
 
 .ryu {
 	float: left;
+	outline: 1px solid red;
 }
 
 .hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
