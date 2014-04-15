@@ -10,24 +10,17 @@ $(document).ready(function() {
  })
  .bind('keyup', function(event) {
  	$('.ryu-cool').hide();
- 	$('.ryu-ready').show();
+ 	if ($('.ryu').hover()) {
+ 		$('.ryu-ready').show();
+ 	}
+ 	else {
+ 		$('.ryu-still').show();
+ 	}
  });
 
  $('.ryu').mouseenter(function(){
  	$('.ryu-still').hide();
  	$('.ryu-ready').show();
-
- function showCool() {$('.ryu-cool').show();}		
- $(this).bind('keydown', function(event){
- 	if(event.keyCode==88) {
- 		$('.ryu-ready').hide();
- 		showCool()
- 	}
- })
- .bind('keyup', function(event) {
- 	$('.ryu-cool').hide();
- 	$('.ryu-ready').show();
-})
 });
  $('.ryu').mouseleave(function() {
  	$('.ryu-ready').hide();
