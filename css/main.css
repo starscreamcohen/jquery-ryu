@@ -1,5 +1,6 @@
 body {
 	background-color: black;
+	font-family: 'Exo', 'sans-serif';
 }
 
 .main {
@@ -12,7 +13,6 @@ body {
 
 .ryu {
 	float: left;
-	outline: 1px solid red;
 }
 
 .hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
@@ -57,4 +57,12 @@ body {
 
 #text {
 	float: right;
+	height: 30%;
+	margin: 10% 14% 0 0;
+	line-height: 3em;
+	font-weight: 700;
+}
+
+#text p:nth-child(even) {
+	margin-left: 18%;
 }
