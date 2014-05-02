@@ -38,7 +38,11 @@ $('.ryu-ready').show();
  })
 .bind('keyup', function(event) {
  	$('.ryu-cool').hide();
- 	$('.ryu-still').show();	
+ 	if($('.ryu').is(":hover")) {
+ 		$('.ryu-ready').show(); 	}
+ 	else {
+ 		$('.ryu-still').show();
+ 	}
  });
 
 
